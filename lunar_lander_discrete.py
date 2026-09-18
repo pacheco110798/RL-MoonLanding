@@ -79,9 +79,9 @@ if __name__ == "__main__":
     env = make_env(render_mode="human")
     describe(env)
 
-    obs, info = env.reset(seed=0)
+    obs, info = env.reset(seed=2)
     total_reward = 0.0
-    for t in range(50):
+    for t in range(500):
         action = env.action_space.sample()
         obs, reward, terminated, truncated, info = env.step(action)
         total_reward += reward
